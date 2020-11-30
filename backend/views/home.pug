@@ -1,0 +1,23 @@
+extends base
+
+block content
+    main.main
+        .container
+            br
+            #ads.row
+                each tour in tours
+                    // Category Card
+                    .col-md-4
+                        .card.rounded
+                            .card-image
+                                img.img-fluid(src='assets/images/pspace1.jpeg' alt='Alternate Text')
+                            .card-image-overlay.m-auto
+                                span.card-detail-badge Open 
+                                | 
+                                span.card-detail-badge=`${tour.price}`
+                                | 
+                                span.card-detail-badge 9/4 ft 
+                            .card-body.text-center
+                                .ad-title.m-auto
+                                    h5 Near CP Market Block-5
+                                a.ad-btn(href='#') View
